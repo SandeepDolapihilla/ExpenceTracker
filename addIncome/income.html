@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Transaction</title>
+    <link rel="stylesheet" href="income.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dialog">
+            <h2>Add Income</h2>
+            <h3>Income</h3>
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <div class="amount-input">
+                    <span class="currency">LKR</span>
+                    <input type="number" id="amount" placeholder="Amount" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="budget">Category</label> 
+                <select id="budget">
+                    <option value="salary">Salary</option>
+                    <option value="freelancing">Freelancing</option>
+                    <option value="investment_returns">Investment Returns</option>
+                    <option value="gifts">Gifts</option>
+                    <option value="other">Other</option>
+                    <option value="entertainment">Investments</option>
+                    <option value="utilities">Income</option>
+                    <optgroup label="Housing">
+                        <option value="rent">Rent</option>
+                        <option value="mortgage">Mortgage</option>
+                    </optgroup>
+                </select>
+            </div>
+            <button class="add-transaction-btn" id="add-transaction-btn">Add Income</button>
+            <button class="add-transaction-btn" id="add-transaction-btn">Update Income</button>
+            <button class="add-transaction-btn" id="add-transaction-btn">Delete Income</button>
+            <p class="instruction">Tap above to complete request</p>
+        </div>
+    </div>
+
+    <script>
+      document.getElementById("add-transaction-btn").addEventListener("click", function() {
+          // Show alert message 
+          alert("Income Added");
+      });
+  </script>
+
+</body>
+</html>

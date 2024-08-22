@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.modal {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px 50px;
+    height: 600px;
+    width: 85rem;
+    align-items: center;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+.currency {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.label {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    background-color: #282828;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.input-field::placeholder {
+    color: #ccc;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    transition: background-color 0.3s ease;
+    
+    
+}
+
+.btn:hover{
+      background-color: #ff9a57;
+}
+
+.note {
+    font-size: 14px;
+    color: #ccc;
+}

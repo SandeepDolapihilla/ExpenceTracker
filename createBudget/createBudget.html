@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Budget</title>
+    <link rel="stylesheet" href="createBudget.css">
+</head>
+<body>
+    <div class="modal">
+      <h1>Create Budget</h1>
+        <div class="modal-header">
+            <span class="currency">LKR</span>
+            <input type="text" placeholder="Amount" class="input-field">
+        </div>
+        <div class="modal-body">
+            <input type="text" placeholder="Budget Name" class="input-field">
+            <textarea placeholder="Description" class="input-field"></textarea>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" id="createBudgetBtn">Create Budget</button>
+            <span class="note">Tap above to complete request</span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("createBudgetBtn").addEventListener("click", function() {
+            // Show alert message
+            alert("Budget added");
+        });
+    </script>
+</body>
+</html>

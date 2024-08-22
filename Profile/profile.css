@@ -1,0 +1,44 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+      box-sizing: border-box;
+      align-items: center;
+      padding-top: 40px;
+}
+  
+.dialog {
+      background-color: #1c1c1c;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 85rem;
+      height: 600px;
+}
+
+.section{
+      background-color: orange;
+}
+
+.dialog-section {
+      flex: 2; /* Set 2/3 of the area for the dialog section */
+      background: linear-gradient(170deg, #ff6600, black);
+      color: #fff; /* Default text color */
+      padding: 90px; /* Add some padding for content */
+    }
+
+    .new-divided-section {
+      flex: 1; /* Set 1/3 of the area for the new divided section */
+     /* Orange background color */
+      padding: 20px; /* Add some padding for content */
+    }
+
+    

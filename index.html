@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://kit.fontawesome.com/dade5e3feb.js" crossorigin="anonymous"></script>
+    <title>My Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <!--<h1>My Card</h1>-->
+            <div class="card-info">
+                <div class="logo">VISA</div>
+                <div class="balance-container">
+                    <div class="balance">LKR 100,000</div>
+                </div>
+                <div class="card-number">**** 8149</div>
+                <div class="validity">05/25</div>
+            </div>
+        </div>
+        <!--starting ---  Charts-->
+        <div class="summary">
+            <div class="income">
+                <div id="Chart-1" style="width:100%; width:690px; height:210x;"></div>
+            </div>
+            <div class="spending">
+                <div id="Chart-2" style="width:100%; width:690px; height:200px;"></div>
+            </div>
+        </div>
+    <div class="summary">
+        <div class="spending">
+            <h2>Spending</h2>
+            <div class="amount">- LKR 8,392</div>
+            <div class="percentage">4.5% <span class="down-arrow">&#8593;</span></div>
+        </div>
+        <div class="income">
+            <h2>Income</h2>
+            <div class="amount">+ LKR 12,402</div>
+            <div class="percentage">4.5% <span class="up-arrow">&#8593;</span></div>
+        </div>
+        
+    </div>
+    <div class="quick-service">
+        <div class="transfer">
+            <span class="icon">&#8646;</span>
+            <span class="label">Add Expense</span>
+        </div>
+        <div class="pause-card">
+            <span class="icon">&#9208;</span>
+            <span class="label">Add Income</span>
+        </div>
+    </div>
+    <div class="transactions">
+        <div class="transaction">
+            <span class="icon">&#9679;</span>
+            <span class="name">Grocery</span>
+            <span class="type">Expense</span>
+            <span class="amount">LKR 2,430</span>
+        </div>
+        <div class="transaction">
+            <span class="icon">&#9679;</span>
+            <span class="name">Maintenance, Repair</span>
+            <span class="type">Expense</span>
+            <span class="amount">LKR 1,430</span>
+        </div>
+        <div class="transaction">
+            <span class="icon">&#9679;</span>
+            <span class="name">Financial Investments</span>
+            <span class="type">Income</span>
+            <span class="amount">LKR 10,000</span>
+        </div>
+        <div class="transaction">
+            <span class="icon">&#9679;</span>
+            <span class="name">Rent</span>
+            <span class="type">Income</span>
+            <span class="amount">LKR 2,400</span>
+        </div>
+        
+        <!--<div class="add-transaction">
+            <span class="icon"> + </span>
+        </div>-->
+    </div>
+
+    <div class="menu">
+        <div class="menu-item-1">
+            <a href="index.html">
+                <span class="icon"><i class="fa-solid fa-house" style="color: white;"></i></span>
+            </a>
+        </div>
+
+        <div class="menu-item-2">
+            <a href=""></a>
+            <span class="icon"><i class="fa-solid fa-chart-line" style="color: white;"></i></span>
+        </div>
+
+        <div class="menu-item-3">
+            <a href="profile.html"></a>
+            <span class="icon"><i class="fa-solid fa-user" style="color: white;"></i></span>
+        </div>
+    </div>
+</div>
+
+<script>
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    function drawChart() {
+    
+    // Set Data
+    const data = google.visualization.arrayToDataTable([
+      ['Contry', 'Mhl'],
+      ['Financial Investment',54.8],
+      ['Maintenance, Repair',48.6],
+      ['Grocery',44.4],
+      ['Rent',23.9],
+      
+    ]);
+    
+    // Set Options
+    const options = {
+      title:'Expenses Structure'
+    };
+    
+    // Draw
+    const chart = new google.visualization.PieChart(document.getElementById('Chart-1'));
+    chart.draw(data, options);
+    
+    }
+</script>
+    
+<script>
+        google.charts.load('current',{packages:['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        
+        function drawChart() {
+        
+        // Set Data
+        const data = google.visualization.arrayToDataTable([
+          ['Price', 'Size'],
+          [50,7],[60,8],[70,8],[80,9],[90,9],
+          [100,9],[110,10],[120,11],
+          [130,14],[140,14],[150,15]
+        ]);
+        
+        // Set Options
+        const options = {
+          title: 'Balance Trend',
+          hAxis: {title: 'Square Meters'},
+          vAxis: {title: 'Price in Millions'},
+          legend: 'none'
+        }; 
+        
+        // Draw
+        const chart = new google.visualization.LineChart(document.getElementById('Chart-2'));
+        chart.draw(data, options);
+        
+        }
+</script>
+
+</body>
+</html>
